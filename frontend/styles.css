@@ -1,0 +1,19 @@
+#forgotImg{
+    width: 100px !important;
+    height: 100px !important;
+}
+.container{
+    margin-top: 5%;
+    width: 800px !important;
+    background-color: yellow;
+    box-shadow: 10px 10px 5px grey;
+    padding: 30px;
+}
+body{
+    background-image: url('https://www.planiter.com.au/wp-content/uploads/2017/05/planiter-queensland-brisbane-blue-bg.png');
+}
+
+#loginBtn,#registerBtn,#forgotPasswordBtn,#resetPasswordBtn{
+    width: 250px;
+    margin-left: 250px;
+}
