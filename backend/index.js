@@ -17,6 +17,7 @@ app.use(express.json())
 app.use(cors())
 
 
+
 app.post("/createNewUser",async (req,res)=>{
     try {
         let clientInfo = await mongoClient.connect(dbURL)
@@ -65,20 +66,21 @@ app.put("/addOTP/:useremail",async (req,res)=>{
         res.status(200).json({message : "OTP Added"})
         clientInfo.close()
 
-        async function mailer(){
-            const transporter = nodemailer.createTransport({
+        async function mailer() {
+
+            let transporter = nodemailer.createTransport({
                 host: "smtp.gmail.com",
                 auth: {
-                    user: "vijaykumarspeaks57@gmail.com", 
-                    pass: "icannotrevealthis",
-                },
+                    user: process.env.EMAIL,
+                    pass: process.env.PASS
+                }
             });
         
-            const info = await transporter.sendMail({
-                from: "vijaykumarspeaks57@gmail.com", 
+            let info = await transporter.sendMail({
+                from: process.env.EMAIL, 
                 to: req.params.useremail,
                 subject: "Reset Password", 
-                text: "Your OTP for Password Reset is: "+req.body.OTP,
+                text: "Your OTP for Password Reset is: "+req.body.OTP
             });
         
             console.log("<------------Message sent: %s------------->", info.response);

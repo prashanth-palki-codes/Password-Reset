@@ -1,6 +1,9 @@
 #forgotImg{
-    width: 100px !important;
-    height: 100px !important;
+    width: 135px !important;
+    height: 135px !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 .container{
     margin-top: 5%;
@@ -11,9 +14,36 @@
 }
 body{
     background-image: url('https://www.planiter.com.au/wp-content/uploads/2017/05/planiter-queensland-brisbane-blue-bg.png');
+    font-family: 'Sofia' !important;
 }
 
-#loginBtn,#registerBtn,#forgotPasswordBtn,#resetPasswordBtn{
+#loginBtn,#registerBtn{
     width: 250px;
-    margin-left: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+#forgotPasswordBtn,#resetPasswordBtn{
+    width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+.badge{
+    letter-spacing: 3px;
+}
+.nav-link{
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+h1,h2,h3{
+    text-align: center;
+    letter-spacing: 3px;
+}
+.alert{
+    letter-spacing: 3px;
 }
